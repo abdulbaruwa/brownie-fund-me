@@ -14,7 +14,7 @@ def deploy_fund_me():
         price_feed_address = mock_aggregator.address
         print ("Mocks deployed");
 
-    fund_me = FundMe.deploy(price_feed_address, {"from": account}, publish_source=True)
+    fund_me = FundMe.deploy(price_feed_address, {"from": account}, publish_source=config["networks"][network.show_active()].get("verify"))
     print(f"contract deployed to {fund_me.address}")
 def main():
      deploy_fund_me()
