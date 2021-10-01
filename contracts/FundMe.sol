@@ -15,7 +15,7 @@ contract FundMe{
     AggregatorV3Interface public priceFeed;
 
     constructor(address _priceFeed) public {
-        priceFeed = AggregatorV3Ingerface(_priceFeed);
+        priceFeed = AggregatorV3Interface(_priceFeed);
         owner = msg.sender;    
     }
     
