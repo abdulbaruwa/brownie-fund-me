@@ -70,7 +70,7 @@ contract FundMe {
     }
 
     //
-    function withdraw() public payable {
+    function withdraw() public payable onlyOwner {
         // this is a reference to current contract we are in.
         // & we only want the contract ower to withdraw
 
